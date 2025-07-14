@@ -1,12 +1,14 @@
 const { database } = require("./database.js")
 
 const roundup = (herdSize) => {
-    const cattle = []
+    // const cattle = []
+    let cattle = []
     const types = database.cattleTypes
-
-    for (let counter = 0; counter < size; counter++) {
+    //changed counter<size to counter<herdSize
+    for (let counter = 0; counter < herdSize; counter++) {
         const randomType = Math.floor(Math.random() * types.length)
-        const animal = types[randomType]
+        //change from types[randomType]
+        const animal = types[randomType].breed
         cattle.push(animal)
     }
 
